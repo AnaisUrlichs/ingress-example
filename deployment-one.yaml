@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-first
+  labels:
+    app: test-first
+spec:
+  selector:
+    matchLabels:
+      app: test-first
+  template:
+    metadata:
+      labels:
+        app: test-first
+    spec:
+      containers:
+      - name: sample-first
+        image: docker.io/anaisurlichs/flask-one:1.0   ##You can use any docker repository to pull your image.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-first
+spec:
+  type: ClusterIP
+  selector:
+    app: test-first
+  ports:
+  - name: http
+    port: 8080
