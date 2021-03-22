@@ -63,7 +63,7 @@ docker build -t anaisurlichs/flask-two:1.0 .
 push it to your Docker Hub
 
 ```
-docker push anaisurlichs/flask-one:1.0
+docker push anaisurlichs/flask-two:1.0
 ```
 
 Now apply the deployment-one.yaml and the deployment-tow.yaml
@@ -82,7 +82,7 @@ kubectl get all
 Installing Ingress Controller
 
 ```
-**kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml**
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml
 ```
 
 **Installing Ingress Resource**
